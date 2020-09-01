@@ -1,0 +1,21 @@
+#
+# CommandFixer [VERSION 1.0]
+#
+# Permissions:
+# - cmd.override = Override the fixed command
+#
+# The general options
+General:
+  # Commands to fix
+  # Values: command
+  Commands:
+    - //calc
+    - //calculate
+    - //solve
+    - //eval
+    - //evaluate
+    - /minecraft:me
+    - /me
+  # The message for when an user try to execute a fixed command
+  # Value: String
+  FixedCommandMessage: "&4[CommandFixer]&c You can't use this command!"

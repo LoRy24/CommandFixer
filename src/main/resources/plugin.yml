@@ -1,0 +1,5 @@
+name: CommandFixer
+version: ${project.version}
+main: me.lory24.mcplugin.commandfixer.CommandFixer
+authors: [LoRy24]
+description: Plugin for fix some commands.
