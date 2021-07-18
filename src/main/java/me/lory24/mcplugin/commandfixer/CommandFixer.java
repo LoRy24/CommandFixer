@@ -1,26 +1,25 @@
 package me.lory24.mcplugin.commandfixer;
 
+import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
-@SuppressWarnings("unused")
 public final class CommandFixer extends JavaPlugin {
 
-    public static CommandFixer instance;
+    private static CommandFixer instance;
+    @Getter private ConfigValues configValues;
 
     @Override
     public void onEnable() {
-
         instance = this;
-        instance.saveDefaultConfig();
+        saveDefaultConfig();
+        configValues = new ConfigValues();
 
         Bukkit.getPluginManager().registerEvents(new PluginListener(), this);
-        Bukkit.getLogger().info("[CommandFixer] Plugin Enabled!");
+        this.getLogger().info("Plugin Enabled!");
     }
 
-    @Override
-    public void onDisable() {
-
-        Bukkit.getLogger().info("[CommandFixer] Plugin Disabled!");
+    public static CommandFixer getInstance() {
+        return instance;
     }
 }

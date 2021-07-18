@@ -5,9 +5,12 @@
 # - cmd.override = Override the fixed command
 #
 # The general options
+#
 General:
-  # Commands to fix
-  # Values: command
+  #
+  # The list of all the commands to fix. Put them into their lower-chars version
+  # Values: A list of Strings (to lower characters)
+  #
   Commands:
     - //calc
     - //calculate
@@ -16,6 +19,8 @@ General:
     - //evaluate
     - /minecraft:me
     - /me
-  # The message for when an user try to execute a fixed command
+  #
+  # The message that will be sent to the player when he try to execute a fixed command
   # Value: String
+  #
   FixedCommandMessage: "&4[CommandFixer]&c You can't use this command!"
